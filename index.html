@@ -25,11 +25,9 @@
                 </label>
 
                 <a class="home-link" href="index.html">Home</a> 
-                <a href="about.html">About</a> 
-                <a href="products.html">Products</a>
-                <a href="blog.html">Blog</a>
-                <a href="login.html">Login</a>
-                
+                <a href="about.html">Product</a> 
+                <a href="products.html">Pricing</a>
+                <a href="blog.html">Contact</a>
                 </div>
             </nav>
             <nav class="container-fluid nav nav--desktop">
@@ -68,10 +66,10 @@
         </header>
         <section class="section section--2 container-fluid">
             <div class="section__container">
-                <div class="section__content section__content--img">
+                <div class="section__content section__content--img w-50">
                     <img src="./img/section2.png" alt="">
                 </div>
-                <div class="section__content section__content--text">
+                <div class="section__content section__content--text w-50">
                     <div class="section__text-content">
                         <div class="section__highlight-line"></div>
                         <h2 class="section__title">Approdable Packages</h2>
@@ -97,7 +95,7 @@
                 </div>
             </div>
             <div class="team-section__row team-section__row--cards">
-                <div class="team-section__card col-3">
+                <div class="team-section__card">
                     <div class="team-card">
                         <div class="team-card__image"><img src="img/user1.png" alt=""></div>
                         <div class="team-card__info">
@@ -111,7 +109,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="team-section__card col-3">
+                <div class="team-section__card">
                     <div class="team-card">
                         <div class="team-card__image"><img src="img/user2.png" alt=""></div>
                         <div class="team-card__info">
@@ -125,7 +123,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="team-section__card col-3">
+                <div class="team-section__card">
                     <div class="team-card">
                         <div class="team-card__image"><img src="img/user3.png" alt=""></div>
                         <div class="team-card__info">
@@ -139,7 +137,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="team-section__card col-3">
+                <div class="team-section__card">
                     <div class="team-card">
                         <div class="team-card__image"><img src="img/user4.png" alt=""></div>
                         <div class="team-card__info">
@@ -152,8 +150,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <!-- Repeat for other team cards -->
+                </div>            
             </div>
         </div>
     </section>
@@ -199,21 +196,55 @@
                 <h5 class="footer__heading">Get In Touch</h5>
                 <ul class="footer__list">
                     <li class="footer__item"><img src="img/bx_bx-phone.png" alt="">(480) 555-0103</li>
-                    <li class="footer__item"><img src="img/bx_bx-map.png" alt="">4517 Washington Ave. Manchester, Kentucky 39495</li>
+                    <li class="footer__item"><img src="img/bx_bx-map.png" alt="">4517 Washington Ave. Manchester, <br> Kentucky 39495</li>
                     <li class="footer__item"><img src="img/carbon_send-alt.png" alt="">debra.holt@example.com</li>
                 </ul>
             </div>
         </div>
         <div class="footer__bottom container">
-            <h6 class="footer__copy">Brandname. All Right Reserved</h6>
-            <div class="footer__socials">
-                <img src="img/facebook.png" alt="">
-                <img src="img/instagram.png" alt="">
-                <img src="img/twitter.png" alt="">
+            <div class="footer__bottom-wrapper">
+                <h6 class="footer__copy">Brandname. All Right Reserved</h6>
+                <div class="footer__socials">
+                    <img src="img/facebook.png" alt="">
+                    <img src="img/instagram.png" alt="">
+                    <img src="img/twitter.png" alt="">
+                </div>
             </div>
+           
         </div>
     </footer>
 
+    <script>
+         const slider = document.querySelector('.team-section__row--cards');
+            let isDown = false;
+            let startX;
+            let scrollLeft;
+
+            slider.addEventListener('mousedown', (e) => {
+            isDown = true;
+            slider.classList.add('active');
+            startX = e.pageX - slider.offsetLeft;
+            scrollLeft = slider.scrollLeft;
+            });
+
+            slider.addEventListener('mouseleave', () => {
+            isDown = false;
+            slider.classList.remove('active');
+            });
+
+            slider.addEventListener('mouseup', () => {
+            isDown = false;
+            slider.classList.remove('active');
+            });
+
+            slider.addEventListener('mousemove', (e) => {
+            if (!isDown) return;
+            e.preventDefault();
+            const x = e.pageX - slider.offsetLeft;
+            const walk = (x - startX) * 3; 
+            slider.scrollLeft = scrollLeft - walk;
+            });
+      </script>
     <script src="index.js"></script>
 </body>
 </html>

@@ -112,7 +112,7 @@ a {
     }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
     .container-fluid {
         width: 100%
     }
@@ -121,6 +121,16 @@ a {
         width: 1140px;
     }
 }
+@media screen and (max-width: 769px) {
+    .container-fluid {
+        width: 100%
+    }
+
+    .container {
+        width: 100%;
+    }
+}
+
 
 @media screen and (max-width: 576px) {
     .container-fluid {
