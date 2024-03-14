@@ -135,13 +135,13 @@
     gap: 30px;
     display: flex;  
     will-change: transform;
-     animation: navShow 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+     animation: navShow 1s cubic-bezier(0.25, 0.8, 0.25, 1);
     transform-origin: top right;
 
 }
 .header__right img{
     will-change: transform;
-     animation: navShow 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+     animation: navShow 1s cubic-bezier(0.25, 0.8, 0.25, 1);
     transform-origin: top left;
 }
 
@@ -745,3 +745,5 @@
         transform: scale(1);
     }
 }
+
+
