@@ -113,7 +113,14 @@
 
 .button--join {
     background-color: #96BB7C;
-    color: #fff;
+    color: #fff;   
+}
+.header__buttons .button--join{
+    animation: shake 2s infinite;
+    transform-origin: 50% 100%;
+}
+.header__buttons .button--join:hover{
+    animation: none;
 }
 
 .button__icon {
@@ -340,7 +347,7 @@
     justify-content: space-between;
     height: 375px !important;
     margin-top: 120px;
-    width: 1049px;
+    width: 100%;
     -moz-user-select: none !important;
     -webkit-touch-callout: none !important;
     -webkit-user-select: none !important;
@@ -634,8 +641,7 @@
 
     .team-section__row {
         padding-left: 50px;
-    }
-
+    } 
     .section__content {
         padding: 0px 10px;
     }
@@ -720,6 +726,10 @@
     .team-section__content {
         padding-left: 20px;
     }
+    .team-section__row--cards {
+        padding: 0px 10px;
+    }
+
 
     .footer {
         padding: 0 20px;
@@ -745,5 +755,10 @@
         transform: scale(1);
     }
 }
+@keyframes shake {
+    0%, 100% { transform: rotate(0); }
+    10%, 30%, 50%, 70%, 90% { transform: rotate(-5deg); }
+    20%, 40%, 60%, 80% { transform: rotate(5deg); }
+  }
 
 
