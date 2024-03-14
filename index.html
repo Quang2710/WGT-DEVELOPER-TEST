@@ -6,26 +6,214 @@
     <title>WGT-DEVELOPER-TEST</title>
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="bootrapcustom.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <script src="index.js"></script>
 </head>
 <body>
-    <header id="header" class="fixed-top d-flex align-items-center">
-        <div class="container d-flex align-items-center justify-content-between">    
-          <div class="logo">
-            <h1><a href="index.html">Brandname</a></h1>          
-          </div>    
-          <nav id="navbar" class="navbar">
-            <ul>
-              <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-              <li><a class="nav-link scrollto" href="#about">Product</a></li>
-              <li><a class="nav-link scrollto" href="#services">Pricing</a></li>
-              <li><a class="nav-link scrollto " href="#portfolio">Contact</a></li>
-              <li><a class="nav-link scrollto" href="#team">Login</a></li>         
-              <li><a class="nav-link scrollto" href="#contact">JOIN US</a></li>           
-            </ul>
-            <i class="bi bi-list mobile-nav-toggle"></i>
-          </nav>    
+        <header>
+            <nav class="nav-mobile ">
+                <input type="checkbox" id="sidebar-active">
+                <label for="sidebar-active" class="open-sidebar-button">
+                <svg class="open-sidebar-button-svg" xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 -960 960 960" width="32"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
+                </label>
+                <label id="overlay" for="sidebar-active"></label>
+                <div class="links-container">
+                <label for="sidebar-active" class="close-sidebar-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 -960 960 960" width="32"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
+                </label>
+
+                <a class="home-link" href="index.html">Home</a> 
+                <a href="about.html">About</a> 
+                <a href="products.html">Products</a>
+                <a href="blog.html">Blog</a>
+                <a href="login.html">Login</a>
+                
+                </div>
+            </nav>
+            <nav class="container-fluid nav nav--desktop">
+                <div class="nav__content">
+                    <div class="nav__logo"><img src="./img/Brandname.png" alt=""></div>
+                    <div class="nav__menu">
+                        <ul class="nav__list">
+                            <li class="nav__item">Home</li>
+                            <li class="nav__item">Product</li>
+                            <li class="nav__item">Pricing</li>
+                            <li class="nav__item">Contact</li>
+                        </ul>
+                        <div class="nav__actions">
+                            <button class="button button--login">Login</button>
+                            <button class="button button--join">JOIN US <img class="button__icon" src="./img/vector-arror.png" alt=""></button>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <div class="container-fluid header">
+                <div class="col-6 header__left">
+                    <div class="header__content">
+                        <h5 class="header__welcome">Welcome</h5>
+                        <h1 class="header__title">Best Learning <br> Opportunities</h1>
+                        <h4 class="header__review">Our goal is to make online <br> education work for everyone</h4>
+                        <div class="header__buttons">
+                            <button class="button button--join">Join Us</button>
+                            <button class="button button--learn">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="header__right col-6">
+                    <img src="./img/header.png" alt="">
+                </div>
+            </div>
+        </header>
+        <section class="section section--2 container-fluid">
+            <div class="section__container">
+                <div class="section__content section__content--img">
+                    <img src="./img/section2.png" alt="">
+                </div>
+                <div class="section__content section__content--text">
+                    <div class="section__text-content">
+                        <div class="section__highlight-line"></div>
+                        <h2 class="section__title">Approdable Packages</h2>
+                        <p class="section__description">
+                            Problems trying to resolve the conflict between the two major realms of Classical physics: 
+                            Newtonian mechanics 
+                        </p>
+                        <a class="section__link" href="">Learn More <img src="img/right.png" alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="team-section container-fluid">
+        <div class="team-section__container container">
+            <div class="team-section__row">
+                <div class="team-section__content">
+                    <h6 class="team-section__tag main-content">Team</h6>
+                    <h3 class="team-section__title">Get Quality Education</h3>
+                    <p class="team-section__description">
+                        Problems trying to resolve the conflict between <br>
+                        the two major realms of Classical physics: Newtonian mechanics
+                    </p>
+                </div>
+            </div>
+            <div class="team-section__row team-section__row--cards">
+                <div class="team-section__card col-3">
+                    <div class="team-card">
+                        <div class="team-card__image"><img src="img/user1.png" alt=""></div>
+                        <div class="team-card__info">
+                            <h5 class="team-card__name">Julian Jameson</h5>
+                            <p class="team-card__profession">Profession</p>
+                            <div class="team-card__icons">
+                                <img src="img/facebook.png" alt="">
+                                <img src="img/instagram.png" alt="">
+                                <img src="img/twiter.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-section__card col-3">
+                    <div class="team-card">
+                        <div class="team-card__image"><img src="img/user2.png" alt=""></div>
+                        <div class="team-card__info">
+                            <h5 class="team-card__name">Julian Jameson</h5>
+                            <p class="team-card__profession">Profession</p>
+                            <div class="team-card__icons">
+                                <img src="img/facebook.png" alt="">
+                                <img src="img/instagram.png" alt="">
+                                <img src="img/twiter.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-section__card col-3">
+                    <div class="team-card">
+                        <div class="team-card__image"><img src="img/user3.png" alt=""></div>
+                        <div class="team-card__info">
+                            <h5 class="team-card__name">Julian Jameson</h5>
+                            <p class="team-card__profession">Profession</p>
+                            <div class="team-card__icons">
+                                <img src="img/facebook.png" alt="">
+                                <img src="img/instagram.png" alt="">
+                                <img src="img/twiter.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-section__card col-3">
+                    <div class="team-card">
+                        <div class="team-card__image"><img src="img/user4.png" alt=""></div>
+                        <div class="team-card__info">
+                            <h5 class="team-card__name">Julian Jameson</h5>
+                            <p class="team-card__profession">Profession</p>
+                            <div class="team-card__icons">
+                                <img src="img/facebook.png" alt="">
+                                <img src="img/instagram.png" alt="">
+                                <img src="img/twiter.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Repeat for other team cards -->
+            </div>
         </div>
-      </header>
+    </section>
+    <footer class="footer container-fluid">
+        <div class="footer__top container">
+            <div class="footer__column footer__column--info col-2">
+                <h5 class="footer__heading">Company Info</h5>
+                <ul class="footer__list">
+                    <li class="footer__item">About Us</li>
+                    <li class="footer__item">Carrier</li>
+                    <li class="footer__item">We are hiring</li>
+                    <li class="footer__item">Blog</li>
+                </ul>
+            </div>
+            <div class="footer__column footer__column--legal col-2">
+                <h5 class="footer__heading">Legal</h5>
+                <ul class="footer__list">
+                    <li class="footer__item">About Us</li>
+                    <li class="footer__item">Carrier</li>
+                    <li class="footer__item">We are hiring</li>
+                    <li class="footer__item">Blog</li>
+                </ul>
+            </div>
+            <div class="footer__column footer__column--features col-2">
+                <h5 class="footer__heading">Features</h5>
+                <ul class="footer__list">
+                    <li class="footer__item">Business Marketing</li>
+                    <li class="footer__item">User Analytic</li>
+                    <li class="footer__item">Live Chat</li>
+                    <li class="footer__item">Unlimited Support</li>
+                </ul>
+            </div>
+            <div class="footer__column footer__column--resources col-2">
+                <h5 class="footer__heading">Resources</h5>
+                <ul class="footer__list">
+                    <li class="footer__item">IOS & Android</li>
+                    <li class="footer__item">Watch a Demo</li>
+                    <li class="footer__item">Customers</li>
+                    <li class="footer__item">API</li>
+                </ul>
+            </div>
+            <div class="footer__column footer__column--contact col-4">
+                <h5 class="footer__heading">Get In Touch</h5>
+                <ul class="footer__list">
+                    <li class="footer__item"><img src="img/bx_bx-phone.png" alt="">(480) 555-0103</li>
+                    <li class="footer__item"><img src="img/bx_bx-map.png" alt="">4517 Washington Ave. Manchester, Kentucky 39495</li>
+                    <li class="footer__item"><img src="img/carbon_send-alt.png" alt="">debra.holt@example.com</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer__bottom container">
+            <h6 class="footer__copy">Brandname. All Right Reserved</h6>
+            <div class="footer__socials">
+                <img src="img/facebook.png" alt="">
+                <img src="img/instagram.png" alt="">
+                <img src="img/twitter.png" alt="">
+            </div>
+        </div>
+    </footer>
+
+    <script src="index.js"></script>
 </body>
 </html>
